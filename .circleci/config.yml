@@ -20,7 +20,7 @@ jobs:
               pwd
               ls -la
               cd content
-              ablog build -b html content -w _build/html
+              ablog build -b html -w _build/html
 
       - persist_to_workspace:
           root: ~/sphinx/content
