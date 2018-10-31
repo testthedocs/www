@@ -103,10 +103,10 @@ html_sidebars = {
 # Turn feeds by setting :confval:`blog_baseurl` configuration variable.
 # Choose to create feeds per author, location, tag, category, and year,
 # default is ``False``.
-#blog_feed_archives = False
+blog_feed_archives = True
 
 # Choose to display full text in blog feeds, default is ``False``.
-#blog_feed_fulltext = False
+blog_feed_fulltext = True
 
 # Blog feed subtitle, default is ``None``.
 #blog_feed_subtitle = None
@@ -116,7 +116,7 @@ html_sidebars = {
 
 # Specify number of recent posts to include in feeds, default is ``None``
 # for all posts.
-#blog_feed_length = None
+blog_feed_length = 10
 
 # -- Font-Awesome Options -----------------------------------------------------
 
