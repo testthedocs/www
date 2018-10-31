@@ -19,7 +19,7 @@ jobs:
           command: |
               pwd
               ls -la
-              sphinx-build -s content -b html content -w content/_build/html
+              ablog -s content -b html content -w content/_build/html
 
       - persist_to_workspace:
           root: ~/sphinx/content
