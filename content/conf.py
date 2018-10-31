@@ -21,7 +21,7 @@ sys.path.append(os.path.abspath('exts'))
 #blog_path = 'blog'
 
 # The "title" for the blog, used in active pages.  Default is ``'Blog'``.
-blog_title = u'ttd Blog'
+blog_title = u'TestTheDocs'
 fontawesome_link_cdn = 'https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css'
 
 # Base URL for the website, required for generating feeds.
