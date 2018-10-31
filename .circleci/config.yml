@@ -11,7 +11,7 @@ defaults: &defaults
 jobs:
   "html":
     docker:
-      - image: testthedocs/ttd-sphinx
+      - image: testthedocs/ablog
     <<: *defaults
     steps:
       - checkout
@@ -19,7 +19,7 @@ jobs:
           command: |
               pwd
               ls -la
-              sphinx-build -c content -b html content content/_build/html
+              sphinx-build -s content -b html content -w content/_build/html
 
       - persist_to_workspace:
           root: ~/sphinx/content
