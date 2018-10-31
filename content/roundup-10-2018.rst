@@ -3,7 +3,7 @@
    :author: svx
 
 ====================
-Roundup Octpber 2018
+Roundup October 2018
 ====================
 
 Community

@@ -6,12 +6,14 @@
 Tips For Writing Documentation
 ==============================
 
-Being busy now for more than month improving the documentation for the `Plone trainings <https://training.plone.org>`_ with lots of *interesting and eye opening moments* it is time for some words of wisdom :)
+Being busy now for more than month improving the documentation for the `Plone trainings <https://training.plone.org>`_
+with lots of *interesting and eye opening moments* it is time for some words of wisdom :)
 
 First, I would like to say thank you for all people who took time to contribute you are **awesome** !
 
 As I said already before, writing documentation is **not uncomplicated**.
-Besides the knowledge about the topic you write about, you need to know how to reach your audience (tone of voice), how to structure and how to write your docs in a appealing way (more on that later).
+Besides the knowledge about the topic you write about, you need to know how to reach your audience (tone of voice),
+how to structure and how to write your docs in a appealing way (more on that later).
 
 Think First - Write Later
 =========================
@@ -46,7 +48,8 @@ Do Not Expect Your Level Of Knowledge
 
 What would be the point of giving trainings, right ? :)
 
-Do not expect that the audience have the same wisdom you have, do not expect that someone who is following the training about `Plone deployments with Ansible <https://training.plone.org>`_ knows what `ZMI <https://docs.plone.org/adapt-and-extend/config/management-interface.html>`_ stands for.
+Do not expect that the audience have the same wisdom you have, do not expect that someone who is following the training about `Plone deployments with Ansible <https://training.plone.org>`_
+knows what `ZMI <https://docs.plone.org/adapt-and-extend/config/management-interface.html>`_ stands for.
 
 Provide these information in the docs (by using a glossary) and during the presentation !
 
@@ -69,7 +72,7 @@ Keep that in mind during writing, use common words and also try to avoid stuff l
 Lets Write
 ==========
 
-In the following some tips for the time we (_you_) actually write.
+In the following some tips for the time we *you* actually write.
 
 Sorry we are not there yet, but almost !
 
@@ -179,7 +182,10 @@ If you use code blocks, make sure that your examples are actually **valid code**
 Cutting off brackets or maybe parts will lead to **not working** code examples,
 which will look bad to the user and also will produce warnings or even build errors of the docs.
 
-Example:
+Examples
+^^^^^^^^
+
+**Not that great**:
 
 .. code-block:: rst
 
@@ -191,6 +197,9 @@ Example:
 
 
 Will result in **no** code highlighting and build warnings !
+
+
+**Great**:
 
 .. code-block:: rst
 
@@ -236,7 +245,8 @@ Solution
 - Aim for docs for around 120 - 130 characters per line.
 - One sentence per line, if possible, if not split meaningful
 
-### The Sexy Factor
+The Sexy Factor
+===============
 
 People still underestimate this !
 
@@ -245,7 +255,7 @@ If you one of these, let me tell you, no offense, but **you are wrong !**
 If you want that people follow your docs and stay motivated you have to make sure that your docs are not 'only' well written and structured but also that they look somehow appealing !
 
 Bonus Tips
-``````````
+==========
 
 - Short Headers
 - Use Pictures

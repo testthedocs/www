@@ -1,0 +1,62 @@
+version: 2.0
+
+defaults: &defaults
+  working_directory: ~/website
+
+jobs:
+  "style":
+    docker:
+      - image: testthedocs/ttd-vale
+    <<: *defaults
+    steps:
+      - checkout
+      - run: vale content/*.md
+
+
+  "html":
+    docker:
+      - image: testthedocs/ttd-hugo
+    <<: *defaults
+    steps:
+      - checkout
+      - run:
+          command: |
+              hugo -v
+              ls -la
+              pwd
+              ls -la public
+
+      - persist_to_workspace:
+          root: .
+          paths: public
+
+
+  "deploy site":
+    docker:
+      - image: testthedocs/ttd-zipcurl
+    <<: *defaults
+    steps:
+        #- checkout
+      - attach_workspace:
+          at: /root/website
+      - run:
+          command: |
+              pwd
+              ls -la
+              echo "now the rest"
+              ls -la /root/website//public/
+
+
+
+workflows:
+  version: 2
+  btd:
+    jobs:
+      - "style"
+      - "html":
+          requires:
+            - "style"
+      - "deploy site":
+          requires:
+            - "html"
+

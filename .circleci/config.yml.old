@@ -1,0 +1,62 @@
+version: 2.0
+
+defaults: &defaults
+  working_directory: ~/website
+
+jobs:
+  "style":
+    docker:
+      - image: testthedocs/ttd-vale
+    <<: *defaults
+    steps:
+      - checkout
+      - run: vale content/*.md
+
+
+  "html":
+    docker:
+      - image: testthedocs/ttd-hugo
+    <<: *defaults
+    steps:
+      - checkout
+      - run:
+          command: |
+              hugo -v
+              ls -la
+              pwd
+              ls -la public
+
+      - persist_to_workspace:
+          root: ~/website/
+          paths:
+            - public
+
+
+  "deploy site":
+    docker:
+      - image: testthedocs/ttd-zipcurl
+    <<: *defaults
+    steps:
+      - checkout
+      - attach_workspace:
+          at: ~/website/build/public
+      - run:
+          command: |
+              echo "this is in build/public/public"
+              ls -la build/public/public
+              .circleci/deploy.sh
+
+
+
+workflows:
+  version: 2
+  btd:
+    jobs:
+      - "style"
+      - "html":
+          requires:
+            - "style"
+      - "deploy site":
+          requires:
+            - "html"
+

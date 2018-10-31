@@ -3,10 +3,11 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to svx's Blog!
-===============================
+===========
+TestTheDocs
+===========
 
-Hello World! Find more about me here: :ref:`about`
+| Write Drunk - Edit Sober - Test Automated
 
 
 Here is a list of most recent posts:
