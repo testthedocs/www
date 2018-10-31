@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 set -e # halt script on error
 
+NETLIFY_SITE_NAME=testthedocs.org
+
 zip -r website.zip ~/sphinx/html/_build/html
 
 curl -H "Content-Type: application/zip" \
