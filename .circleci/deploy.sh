@@ -1,8 +1,7 @@
 #!/usr/bin/env bash
 set -e # halt script on error
 
-cd /root/website/build/public/
-zip -r website.zip public
+zip -r website.zip ~/sphinx/html/_build/html
 
 curl -H "Content-Type: application/zip" \
      -H "Authorization: Bearer $NETLIFYKEY" \
