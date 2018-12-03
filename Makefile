@@ -20,6 +20,10 @@ DOCKER := $(bash docker)
 help: ## This help message
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'
 
+.PHONY: html
+html: ## Builds HTML version
+	@docker run --rm -it -v $(pwd)/content:/srv/data testthedocs/ablog build
+
 .PHONY: build
 build: ## Builds docker image
 	docker build --no-cache=true -t $(NAME):$(VERSION) --rm -f dockerfiles/Dockerfile .
