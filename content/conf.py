@@ -178,7 +178,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'ttd'
-copyright = u'2018, svx'
+copyright = u'2018, TTD-Community'
 author = u'svx'
 
 # The version info for the project you're documenting, acts as replacement for
