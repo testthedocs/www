@@ -28,6 +28,8 @@ fontawesome_link_cdn = 'https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/f
 # e.g. blog_baseurl = "http://example.com/"
 blog_baseurl = u'True'
 
+#site_url = 'https://testthedocs.org'
+
 # Choose to archive only post titles. Archiving only titles can speed
 # up project building.
 #blog_archive_titles = False
@@ -178,7 +180,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'ttd'
-copyright = u'2018, TTD-Community'
+copyright = u'2019, TTD-Community'
 author = u'svx'
 
 # The version info for the project you're documenting, acts as replacement for

@@ -16,6 +16,7 @@ RUN adduser -s /bin/false -D -H ttd \
     bash \
     && chmod +x /usr/local/bin/entrypoint.sh \
     && pip3 install --no-cache-dir --upgrade pip \
+    && pip3 install --no-cache-dir --upgrade sphinx_sitemap \
     && pip3 install --no-cache-dir --upgrade ablog
 
 WORKDIR /srv/data
